@@ -16,6 +16,7 @@ details:first-child {
 summary {
   padding: 10px;
   outline: 0;
+  list-style-type: none;
 }
 
 summary::-webkit-details-marker {
@@ -60,3 +61,6 @@ details[open] summary:after {
 }
 
 /* do something here */
+details[open] p{
+  display:block
+}
