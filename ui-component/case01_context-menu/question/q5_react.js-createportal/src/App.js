@@ -40,7 +40,10 @@ export default function App() {
         ))}
       </div>
 
-      <ContextPortal /* 채워 넣으세요. */ />
+      <ContextPortal
+        target={detailRefs.current[openedIndex]}
+        children={<p>dummyData[openedIndex]?.context</p>}
+      />
     </>
   );
 }
