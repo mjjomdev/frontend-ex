@@ -10,10 +10,12 @@ export default function App() {
     e.preventDefault();
     e.stopPropagation();
     // do something here.
+    setOpen(index === openedIndex ? null : index)
   };
 
   const closeAll = (e) => {
     // do something here.
+    if (e.target.nodeName !== "P") setOpen(null)
   };
 
   useEffect(() => {
