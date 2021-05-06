@@ -12,6 +12,13 @@ const offsetTops = contentItems.map((elem) => {
 window.addEventListener("scroll", (e) => {
   const { scrollTop } = e.target.scrollingElement;
   // do something
+  const targetIndex = offsetTops.findIndex(([start, end]) => (
+    scrollTop >= start && scrollTop < end
+  ))
+  navItems.forEach((c, i) => {
+    if (i !== targetIndex) c.classList.remove('on');
+    else c.classList.add('on')
+  })
 });
 
 navElem.addEventListener("click", (e) => {
